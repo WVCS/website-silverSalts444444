@@ -10,6 +10,28 @@
   <center>
   <h3 id="head"> the CULT of EPILEPSY </h3>
   <p id="o"> the cult of epilepsy is </p>
+  <script>
+    function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+  setInterval(function() {
+    const randomColor = getRandomColor();
+    const randomColort = getRandomColor();
+    document.getElementById("head").style.color = randomColort;
+    document.body.style.backgroundColor = randomColor;
+    if (randomColor == "#000000"){
+      document.getElementById("o").style.color = "white"
+      document.getElementById("o").text = "the cult of epilepsy is ionghroighrgruighrughhhhnerwpjgewgewonhewuyewognpewefgenmgegybewgowenpavgfdgvbndwdowp"
+    }
+    
+  }, 10);
+
+  </script>
 </body>
 </html>
 <style>
