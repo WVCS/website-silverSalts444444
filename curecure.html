@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Elements</title>
+</head>
+<body>
+  <center>
+    <h3 id = "h"> FIND THE CURE </h3>
+  <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/jvKeX0odr9ucxfn2ZVr0UN0L1jUcwOu55bpIJ4kLTys/embed"></iframe>
+   
+</body>
+</html>
+<style>
+  body {
+  background-color: red;
+}
+h3{
+  color: blue;
+  font-size: 200%;
+  letter-spacing: 5px;
+}
+  </style>
+<script>
+  function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+setInterval(function() {
+  const randomColor = getRandomColor();
+  const randomColort = getRandomColor();
+  document.body.style.backgroundColor = randomColor;
+  document.getElementById("h").style.color = randomColort;
+  
+}, 10);
+
+</script>
