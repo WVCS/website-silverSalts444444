@@ -7,6 +7,116 @@
   <title>Document</title>
 </head>
 <body>
+  <ul>
+  <li><a href="index.html">info</a></li>
+  <li><a href="cure.html">the finder</a></li>
+  <li><a href="contact.asp">the lab</a></li>
+</ul>
+  <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  display:flex;
+  justify-content: right; /* Centers the items horizontally */
+  width:100%;
+  border: 3px solid #ddd; /* Adds a border around the navbar */
+}
+li {
+  flex-grow:1;
+  margin-right: 0px; /* Adds some spacing between the list items */
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 12px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.01s ease, color 0.1s ease;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+  </style>
+  <script>
+    function getRandomColorLight() {
+            const letters = '89ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 8)];
+            }
+            return color;
+        }
+var ishov = 0;
+window.addEventListener('load', function() {
+    const currentPath = window.location.pathname;  // Get current page URL
+
+    // Select all <a> links and check their href attribute
+    document.querySelectorAll('a').forEach(function(link) {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');  // Add active class if the href matches
+        } else {
+            link.classList.remove('active');  // Remove active class from others
+        }
+    });
+});
+function getRandomColorDark() {
+            const letters = '01234567';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 8)];
+            }
+            return color;
+        }
+var ishov = 0;
+window.addEventListener('load', function() {
+    const currentPath = window.location.pathname;  // Get current page URL
+
+    // Select all <a> links and check their href attribute
+    document.querySelectorAll('a').forEach(function(link) {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');  // Add active class if the href matches
+        } else {
+            link.classList.remove('active');  // Remove active class from others
+        }
+    });
+});
+setInterval(function() {
+    const randomColorm = getRandomColorDark();
+    const randomColorz = getRandomColorLight();
+    
+    // Select all <a> tags and set their background color
+    document.querySelectorAll("a").forEach(function(link) {
+      if (!link.classList.contains('active')){
+        
+        link.addEventListener('mouseover', function() {
+            link.setAttribute('data-hover', 'true');  // Mark the link as hovered
+        });
+
+        link.addEventListener('mouseout', function() {
+            link.setAttribute('data-hover', 'false'); // Mark the link as not hovered
+        });
+
+        // Apply the color based on the hover state
+        if (link.getAttribute('data-hover') === 'true') {
+            link.style.backgroundColor = randomColorm;  // Hover color
+        } else {
+            link.style.backgroundColor = randomColorz;  // Regular color
+        }
+      }
+    });
+   
+}, 10);
+  </script>
   <center>
   <h3 id="head"> the CULT of EPILEPSY </h3>
   <p id="o"> the cult of epilepsy is c wlpv xvhkwrxgx ks eoimpa "vtkfvtus" sc hcehkhx xjy tyty. vtkfvtus zwpn nlcn usenfvu nympe zx km, rrf zceubzri cj spfp e yup xq lvzguc xjy rmngvrv ce lwgrru...
