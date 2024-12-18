@@ -57,17 +57,15 @@ a.active {
             return color;
         }
 var ishov = 0;
-window.addEventListener('load', function() {
-    const currentPath = window.location.pathname;  // Get current page URL
+const currentPath = window.location.pathname;  // Get current page URL
 
-    // Select all <a> links and check their href attribute
-    document.querySelectorAll('a').forEach(function(link) {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');  // Add active class if the href matches
-        } else {
-            link.classList.remove('active');  // Remove active class from others
-        }
-    });
+// Select all <a> links and check their href attribute
+document.querySelectorAll('a').forEach(function(link) {
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');  // Add active class if the href matches
+    } else {
+        link.classList.remove('active');  // Remove active class from others
+    }
 });
 function getRandomColorDark() {
             const letters = '01234567';
